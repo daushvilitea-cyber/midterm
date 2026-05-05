@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 MyStore – React / Next.js E-commerce App
 
-## Getting Started
+## 📌 Project Description
 
-First, run the development server:
+This is a simple e-commerce web application built with Next.js (App Router) and React.  
+The project includes product listing, product details, cart functionality, and basic user authentication.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The goal of this project is to demonstrate understanding of:
+- Client-side and server-side data fetching
+- State management with React hooks
+- Routing in Next.js
+- Working with external APIs
+- LocalStorage for persistence
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🚀 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🛍 Products
+- Fetch products from API: https://fakestoreapi.com/products
+- Display list of products
+- Navigate to product details page (/products/[id])
 
-## Learn More
+### 📄 Product Details
+- Dynamic routing using [id]
+- Fetch single product data
+- Display product image, title, description, and price
+- Ability to select quantity
+- Add product to cart
 
-To learn more about Next.js, take a look at the following resources:
+### 🛒 Cart
+- Fetch cart data from API
+- Combine cart items with product details
+- Increase / decrease product quantity
+- Calculate total price
+- Store cart data in LocalStorage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 👤 Profile
+- Fetch user data from API: https://fakestoreapi.com/users/3
+- Display user information (name, email, phone, address)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔐 Authentication (Client-side)
+- Register user (saved in LocalStorage)
+- Login with email and password
+- Basic validation
+- Store auth state (isAuth)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧠 Technologies Used
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js (App Router)
+- React
+- JavaScript (ES6+)
+- CSS Modules
+- FakeStore API
+
+---
+
+
+## ⚠️ Notes
+
+- Authentication is simulated (client-side only)
+- No backend or database is used
+

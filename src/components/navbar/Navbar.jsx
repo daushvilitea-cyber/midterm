@@ -1,16 +1,30 @@
 import Link from "next/link";
-import styles from "./Navbar,module.css";
+import styles from './navbar.module.css'
+
 
 import React from 'react'
 
 function Navbar() {
     return (
-        <nav>
-            <Link href="/products">products</Link>
-            <Link href="/about">about</Link>
-            <Link href="/contact">contact</Link>
+        <header className={styles.header}>
+            <div className={styles.row}>
 
-        </nav>
+                <nav className={styles.nav}>
+                    <Link href="/products">products</Link>
+                    <Link href="/profile">profile</Link>
+                    <Link href="/cart">cart</Link>
+                </nav>
+
+                <div className={styles.search}>
+                    <input type="text" placeholder="Search..." />
+                </div>
+
+                <div className={styles.logo}>
+                    <h1>MyStore</h1>
+                </div>
+
+            </div>
+        </header>
     )
 }
 
