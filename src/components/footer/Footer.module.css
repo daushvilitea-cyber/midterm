@@ -1,0 +1,23 @@
+.Footer {
+    background-color: #101010;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+}
+
+.FooterContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FooterContainer span {
+    cursor: pointer;
+}
+
+FooterContainer.span:hover {
+    text-decoration: underline;
+}

@@ -11,8 +11,8 @@ function Navbar() {
 
                 <nav className={styles.nav}>
                     <Link href="/products">products</Link>
-                    <Link href="/profile">about</Link>
-                    <Link href="/cart">contact</Link>
+                    <Link href="/profile">profile</Link>
+                    <Link href="/cart">cart</Link>
                 </nav>
 
                 <div className={styles.search}>

@@ -34,7 +34,7 @@ function page() {
     <div className="products">
       {products.map((product) => (
         <div className="card" key={product.id}>
-          <Link href={`/products/details/${product.id}`}>
+          <Link href={`/products/${product.id}`}>
             <img src={product.image} alt={product.title} width={200}/>
 
             <h3>{product.title}</h3>

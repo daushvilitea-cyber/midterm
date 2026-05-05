@@ -1,8 +1,21 @@
-import React from 'react'
+import styles from './Footer.module.css'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <footer className={styles.Footer}>
+      
+      <div className={styles.FooterContainer}>
+        <span>Condisions of Use</span>
+        <span>Privacy Notice</span>
+        <span>Interest-Based adds</span>
+
+      </div>
+      <div className={styles.FooterContainer}>
+        <span>© 1996-2026, MyStore.com, Inc. or its affiliates</span>
+
+      </div>
+
+    </footer>
   )
 }
 
