@@ -8,6 +8,7 @@ function layout({children}) {
   <html>
     <body>
       <Navbar />
+      
       {children}
       <Footer />
     </body>
