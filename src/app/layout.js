@@ -4,15 +4,17 @@ import Footer from "../components/footer/Footer";
 
 import React from 'react'
 
-function layout({children}) {
+function layout({ children }) {
   return (
-  <html>
-    <body>
-      <Navbar />
-      {children}
-      <Footer />
-    </body>
-  </html>
+    <html>
+      <body>
+        <storeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </storeProvider>
+      </body>
+    </html>
   )
 }
 
