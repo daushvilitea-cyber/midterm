@@ -1,19 +1,22 @@
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-import './globals.css'
+import "./globals.css";
+import StoreProvider from "./storeProvider";
 
+import React from "react";
 
-function layout({children}) {
+function Layout({ children }) {
   return (
-  <html>
-    <body>
-      <Navbar />
-      
-      {children}
-      <Footer />
-    </body>
-  </html>
-  )
+    <html>
+      <body>
+        <StoreProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </StoreProvider>
+      </body>
+    </html>
+  );
 }
 
-export default layout
+export default Layout;
