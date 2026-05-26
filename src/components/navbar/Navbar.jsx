@@ -11,7 +11,7 @@ function Navbar() {
 
                 <nav className={styles.nav}>
                     <Link href="/products">products</Link>
-                    <Link href="/profile">profile</Link>
+                    <Link href="/register">profile</Link>
                     <Link href="/cart">cart</Link>
                 </nav>
 

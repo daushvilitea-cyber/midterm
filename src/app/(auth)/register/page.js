@@ -5,8 +5,6 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import { checkUser } from "@/helpers";
 
 const userSchema = yup.object().shape({
   username: yup
@@ -34,10 +32,7 @@ function register() {
     reset,
   } = useForm({ resolver: yupResolver(userSchema) });
 
-  useEffect(() => {
-    const exists = checkUser();
-    if (exists)  {router.push("/");}
-  }, [router]);
+ 
 
   const handleRegister = async (data) => {
     try {
@@ -60,7 +55,7 @@ function register() {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Register | Add New User</h2>
-      <form onSubmit={handleSubmit(handleRegister)}>
+      <form className={styles.form} onSubmit={handleSubmit(handleRegister)}>
         <div className={styles.inputWrapper}>
           <label>Username: </label>
           <br />
