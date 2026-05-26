@@ -1,11 +1,15 @@
 'use client'
 
-import {createSlice} from "@reduxjs/toolkit";
+import { useParams } from "next/navigation"
+import { useEffect, useState } from "react"
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { addToCart } from "@/lib/slices/cartSlice";
 
 function details() {
     const { id } = useParams()
     const [product, setProduct] = useState(false)
     const [quantity, setQuantity] = useState(1)
+    const dispatch = useAppDispatch()
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -25,21 +29,8 @@ const decrease = () => {
   setQuantity((prev) => Math.max(1, prev - 1))
 }
 
-const addToCart = () => {
-  const existing = JSON.parse(localStorage.getItem('cart')) || []
-
-  const found = existing.find((item) => item.id === product.id)
-
-  if (found) {
-    found.quantity += quantity
-  } else {
-    existing.push({
-      ...product,
-      quantity: quantity
-    })
-  }
-
-  localStorage.setItem('cart', JSON.stringify(existing))
+const addToCartHandler = () => {
+  dispatch(addToCart({ ...product, quantity }))
 }
 
     if (!product) {
@@ -60,7 +51,7 @@ const addToCart = () => {
       <button onClick={increase}>+</button>
     </div>
 
-    <button onClick={addToCart}>
+    <button onClick={addToCartHandler}>
       Add to cart
     </button>
   </div>
